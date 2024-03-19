@@ -29,9 +29,9 @@ import React, { useContext } from 'react';
  return (
  <tr>
  <td>{props.name}</td>
- <td>£{props.cost}</td>
- <td><button onClick={event=> increaseAllocation(props.name)}>+</button></td>
- <td><TiDelete size='1.5em' onClick={handleDeleteExpense}></TiDelete></td>
+ <td>{props.currency}{props.cost}</td>
+ <td><button className="m-4" style={{ backgroundColor: "#32CD32",  borderColor: "#32CD32" }} onClick={event=> increaseAllocation(props.name)}>+</button></td>
+ <td><TiDelete size='1.5em' style={{ backgroundColor: "#f44336",  borderColor: "#f44336" }}  onClick={handleDeleteExpense}></TiDelete></td>
  </tr>
  );
  };

@@ -62,7 +62,7 @@ return (
 <option defaultValue value="Add" name="Add">Add</option>
 <option value="Reduce" name="Reduce">Reduce</option>
 </select>
-<label>£{currency}</label>
+<label>£{props.currency}</label>
 <input
 
 required='required'

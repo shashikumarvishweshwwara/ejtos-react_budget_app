@@ -1,9 +1,15 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
-const Currency = () => {
+const Currency = (props) => {
+const { dispatch } = useContext(AppContext);
 const [currency, setCurrency] = useState('');
 const handleCurrencyChange = (event) => {
+    dispatch({
+        type: 'CHG_CURRENCY',
+        payload: event.target.value,
+        });
+    alert("you selected:"+event.target.value);
 setCurrency(event.target.value);
 }
 

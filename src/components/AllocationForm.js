@@ -8,6 +8,7 @@ const [cost, setCost] = useState('');
 const [action, setAction] = useState('');
 const { expenses } = useContext(AppContext);
 const { budget } = useContext(AppContext);
+const { currency } = useContext(AppContext);
 const totalExpenses = expenses.reduce((total, item) => {
     return (total += item.cost);
     }, 0);
@@ -61,7 +62,7 @@ return (
 <option defaultValue value="Add" name="Add">Add</option>
 <option value="Reduce" name="Reduce">Reduce</option>
 </select>
-<label>£</label>
+<label>£{currency}</label>
 <input
 
 required='required'
